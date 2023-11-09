@@ -47,7 +47,7 @@ export const ActivityHolder = () => {
         repeatingDay.distance += item.distance;
       }
     } else {
-        setDays((prev) => [...prev, item].sort((a, b) => moment(a.date, 'DD.MM.YY') - moment(b.date, 'DD.MM.YY')));
+        setDays((prev) => [...prev, item].sort((a, b) => Number(moment(a.date, 'DD.MM.YY')) - Number(moment(b.date, 'DD.MM.YY'))));
     }
 
     setForm({
